@@ -29,6 +29,11 @@ export default function Layout({ children, home }) {
           data-id="29660159-2540-4921-b585-6cfaa524b9e6"
           data-utcoffset="-4"
         ></script>
+        <script
+          defer
+          data-domain="andrewtruex.tech"
+          src="https://plausible.io/js/script.js"
+        ></script>
       </Head>
       <header className={styles.header}>
         {home ? (
