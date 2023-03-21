@@ -3,6 +3,7 @@ import Image from "next/image"
 import styles from "./layout.module.css"
 import utilStyles from "../styles/utils.module.css"
 import Link from "next/link"
+import Script from "next/script"
 
 const name = "Andrew Truex"
 export const siteTitle = "Andrew Truex"
@@ -34,10 +35,23 @@ export default function Layout({ children, home }) {
           data-domain="andrewtruex.tech"
           src="https://plausible.io/js/script.js"
         ></script>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-4MMPD7N3L5"
-        ></script>
+        <Script>
+          strategy="afterInteractive" src=
+          {`https://www.googletagmanager.com/gtag/js?id=G-4MMPD7N3L5`}
+        </Script>
+        <Script>
+          id="ga-tracking" strategy="afterInteractive" dangerouslySetInnerHTML=
+          {{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4MMPD7N3L5', {
+            page_path: window.location.pathname,
+        });
+        `,
+          }}
+        </Script>
       </Head>
       <header className={styles.header}>
         {home ? (
