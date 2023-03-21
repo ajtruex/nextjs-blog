@@ -24,6 +24,11 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <script
+          src="https://cdn.counter.dev/script.js"
+          data-id="29660159-2540-4921-b585-6cfaa524b9e6"
+          data-utcoffset="-4"
+        ></script>
       </Head>
       <header className={styles.header}>
         {home ? (
