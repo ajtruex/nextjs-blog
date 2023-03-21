@@ -37,7 +37,7 @@ export default function Layout({ children, home }) {
         ></script>
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-HRNSGD1TEM`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-ZJ5BZMBEMM`}
         />
         <script
           dangerouslySetInnerHTML={{
@@ -45,7 +45,7 @@ export default function Layout({ children, home }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-HRNSGD1TEM', {
+              gtag('config', 'G-ZJ5BZMBEMM', {
                 page_path: window.location.pathname,
               });
             `,
