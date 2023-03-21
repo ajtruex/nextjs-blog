@@ -34,6 +34,15 @@ export default function Layout({ children, home }) {
           data-domain="andrewtruex.tech"
           src="https://plausible.io/js/script.js"
         ></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-4MMPD7N3L5"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-4MMPD7N3L5')
+        </script>
       </Head>
       <header className={styles.header}>
         {home ? (
