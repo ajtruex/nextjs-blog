@@ -35,23 +35,17 @@ export default function Layout({ children, home }) {
           data-domain="andrewtruex.tech"
           src="https://plausible.io/js/script.js"
         ></script>
-        <Script>
-          strategy="afterInteractive" src=
-          {`https://www.googletagmanager.com/gtag/js?id=G-4MMPD7N3L5`}
-        </Script>
-        <Script>
-          id="ga-tracking" strategy="afterInteractive" dangerouslySetInnerHTML=
-          {{
-            __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-4MMPD7N3L5', {
-            page_path: window.location.pathname,
-        });
-        `,
-          }}
-        </Script>
+        <Script
+          strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=G-4MMPD7N3L5`}
+          />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){window.dataLayer.push(arguments);}
+             gtag('js', new Date());
+             gtag('config', 'G-4MMPD7N3L5');
+            `}
+      </Script>
       </Head>
       <header className={styles.header}>
         {home ? (
