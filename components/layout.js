@@ -51,6 +51,12 @@ export default function Layout({ children, home }) {
             `,
           }}
         />
+        <script
+          async
+          defer
+          src="https://analytics.umami.is/script.js"
+          data-website-id="a5c4825e-1010-488f-beb2-0afe23196e67"
+        ></script>
       </Head>
       <header className={styles.header}>
         {home ? (
